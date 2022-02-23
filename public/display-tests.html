@@ -7,7 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/display-test.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/sw.js')
+          .then(() => {console.log('Service worker registered')})
+      }
 
+    </script>
 </head>
 
 <body>
