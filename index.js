@@ -10,7 +10,7 @@ const connectDB = require('./config/db')
 const app = express();
 
 // set public folder to server frontend
-app.use(express.static(path.join(__dirname, '..', 'public')))
+app.use(express.static(path.join(__dirname, 'frontend')))
 // use bodyParser to parse req.body
 const jsonParser = bodyParser.json();
 
