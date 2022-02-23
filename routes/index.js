@@ -32,14 +32,14 @@ var storage = multer.diskStorage({
 })
 var upload = multer({ storage: storage })
 router.get('/', (req, res) => {
-    res.sendFile('display-tests.html', { root: path.join(__dirname, '../', 'frontend') }, (err) => console.log(err))
+    res.sendFile('display-tests.html', { root: path.join(__dirname, '../', 'public') }, (err) => console.log(err))
 })
 
 router.get('/start-test', (req, res) => {
-    res.sendFile('test.html', { root: path.join(__dirname, '../', 'frontend') }, (err) => console.log(err))
+    res.sendFile('test.html', { root: path.join(__dirname, '../', 'public') }, (err) => console.log(err))
 })
 router.get('/score-board', (req, res) => {
-    res.sendFile('score_board.html', { root: path.join(__dirname, '../', 'frontend') }, (err) => console.log(err))
+    res.sendFile('score_board.html', { root: path.join(__dirname, '../', 'public') }, (err) => console.log(err))
 })
 router.post('/storeScore', (req, res) => {
     name = req.body['name'];
@@ -64,7 +64,7 @@ router.post('/getUsersByTestId', (req, res) => {
 })
 
 router.get('/upload-assignment', (req, res) => {
-    res.sendFile('upload_assignment.html', { root: path.join(__dirname, '../', 'frontend') }, (err) => console.log(err))
+    res.sendFile('upload_assignment.html', { root: path.join(__dirname, '../', 'public') }, (err) => console.log(err))
 })
 
 // console.log(name)
@@ -75,7 +75,7 @@ router.post('/store-assignment', upload.single('filename'), (req, res) => {
 })
 
 router.get('/show-assignments', (req, res) => {
-    res.sendFile('display_assignments.html', { root: path.join(__dirname, '../', 'frontend') }, (err) => console.log(err))
+    res.sendFile('display_assignments.html', { root: path.join(__dirname, '../', 'public') }, (err) => console.log(err))
 
 })
 router.post('/getAssignments', (req, res) => {
@@ -90,6 +90,6 @@ router.post('/getAssignments', (req, res) => {
 
 router.get('/assignments', (req, res) => {
     console.log(`File name ${req.query.file_name}`)
-    res.sendFile(req.query.file_name, { root: path.join(__dirname, '../', 'frontend', 'assignments') }, (err) => console.log(err))
+    res.sendFile(req.query.file_name, { root: path.join(__dirname, '../', 'public', 'assignments') }, (err) => console.log(err))
 })
 module.exports = router;
