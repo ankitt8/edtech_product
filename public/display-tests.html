@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/display-test.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/display-test.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker
-          .register('/sw.js')
-          .then(() => {console.log('Service worker registered')})
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(() => {
+          console.log('Service worker registered');
+        });
       }
-
     </script>
-</head>
+  </head>
 
-<body>
-  
+  <body>
     <div class="modal-header">
-        <h4>EdTech Product</h4>
+      <h4>EdTech Product</h4>
     </div>
-    <div class=" display-test-container">
-    </div>
+    <div class="display-test-container"></div>
     <footer>
-        <p class="highlight" >Connect Me On
-             <a href="https://www.linkedin.com/in/ankitt8" target="_blank" >
-             <img src="images/linkedin.png" alt="LinkedIn" class="linkedin">
+      <p class="highlight">
+        Connect Me On
+        <a href="https://www.linkedin.com/in/ankitt8" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn" class="linkedin" />
         </a>
-    </p>
-      
-        </span>
+      </p>
     </footer>
     <script src="./scripts/display_test_archive.js"></script>
-
-</body>
-
+  </body>
 </html>
