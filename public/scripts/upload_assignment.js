@@ -5,28 +5,24 @@
 // console.log(emailId);
 // console.log(name);
 
-
 function validate() {
-    var name = document.querySelector('#_name').value;
-    const regex = /^[a-zA-Z]+\s*[a-zA-Z]$/;
-    document.querySelector('#file_input').setAttribute('name', name);
-    return regex.test(name);
+  var name = document.querySelector('#_name').value;
+  const regex = /^[a-zA-Z]+\s*[a-zA-Z]$/;
+  document.querySelector('#file_input').setAttribute('name', name);
+  return regex.test(name);
 }
 if (!name) {
+  // console.log(document);
+  var nameInputDiv = document.querySelector('#input_div');
+  // console.log(nameInputDiv)
+  var inputName = document.createElement('input');
+  inputName.setAttribute('type', 'text');
+  inputName.setAttribute('id', '_name');
+  inputName.setAttribute('placeholder', 'Enter Your Name');
+  inputName.setAttribute('value', '');
 
-    // console.log(document);
-    var nameInputDiv = document.querySelector('#input_div');
-    // console.log(nameInputDiv)
-    var inputName = document.createElement('input');
-    inputName.setAttribute('type', 'text');
-    inputName.setAttribute('id', '_name');
-    inputName.setAttribute('placeholder', 'Enter Your Name');
-    inputName.setAttribute('value', '');
-
-    nameInputDiv.appendChild(inputName);
-
+  nameInputDiv.appendChild(inputName);
 }
-
 
 // document.querySelector('#assignment_form').addEventListener('submit', (e) => {
 //     e.preventDefault();
