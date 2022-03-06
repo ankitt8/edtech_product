@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "prepare": "husky install"
   },
   "author": "Ankit Tiwari",
   "license": "ISC",
@@ -19,7 +20,12 @@
     "multer": "^1.4.2"
   },
   "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
     "nodemon": "^2.0.4",
     "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.{js,css,html,json,md}": "prettier --write"
   }
 }
